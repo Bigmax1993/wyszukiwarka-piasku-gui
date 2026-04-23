@@ -1,9 +1,8 @@
 # Wyszukiwarka piasku (OLX)
 
-Projekt składa się z dwóch warstw:
+Projekt zawiera silnik scrapingu:
 
-- `olx_scraper_background.py` - silnik scrapingu OLX (Selenium, cache, retry, captcha/cookies recovery, zapis plików),
-- `streamlit_app.py` - UI do sterowania scraperem (wybór miasta/miejscowości, start/stop, podgląd statusu i wyników).
+- `olx_scraper_background.py` - scraper OLX (Selenium, cache, retry, captcha/cookies recovery, zapis plików).
 
 ## Lokalizacje
 
@@ -40,7 +39,7 @@ Projekt składa się z dwóch warstw:
   - `lxml`
   - `psutil`
   - `pytest`
-  - `streamlit`
+  - `requests`
 
 ## Instalacja
 
@@ -56,23 +55,6 @@ pip install -r requirements.txt
 ```powershell
 python olx_scraper_background.py
 ```
-
-### UI Streamlit
-
-```powershell
-streamlit run "C:\Users\kanbu\Documents\Wyszukiwarka piasku\streamlit_app.py"
-```
-
-## UI Streamlit - funkcje
-
-- edytowalne pole `Miasto / miejscowość` (możesz wpisać dowolną nazwę ręcznie),
-- opcjonalne pole `Własny URL OLX` (pełny link z najwyższym priorytetem),
-- opcja `Cała Polska`,
-- automatyczne budowanie URL pod maską,
-- parametry `Liczba stron`, `headless`, `incremental`,
-- przycisk `Start`,
-- przycisk `Stop` (bezpieczne zatrzymanie),
-- podgląd statusu, zbiorczego CSV i alertów.
 
 ## Główne parametry w `olx_scraper_background.py`
 

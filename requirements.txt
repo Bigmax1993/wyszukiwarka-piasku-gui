@@ -4,5 +4,4 @@ beautifulsoup4
 lxml
 psutil
 pytest
-streamlit
 requests
